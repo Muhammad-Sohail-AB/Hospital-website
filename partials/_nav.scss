@@ -1,0 +1,175 @@
+//  ! @@@@@@@@@@@@@@@@@@@@@@@@@@ Navigation bar starts here @@@@@@@@@@@@@@@@@@@@@@@@@
+nav{
+    @include backgroundgradient;
+    // border: 1px solid red;
+    height: 8rem;
+    color: $white-color;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 0 16px 16px rgba($color: #000000, $alpha: 0.1);
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    a{
+        color: $white-color;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        li{
+            a{
+                font-weight: 300;               
+               
+            }
+        }
+        .Make-Appointment{
+            @include button($secondary-color,$white-color);
+        }
+    }
+    button{
+        align-self: center;
+        width: fit-content;
+        background: transparent;
+        color: $white-color;
+        font-size: 3.2rem;
+        display: none;
+        cursor: pointer;
+    }
+    
+}
+
+.navBarScroll{
+    background: $white-color;
+    color: $black-color;
+    box-shadow: none;
+    a{
+        color: $primary-color;
+    }
+    h2{
+        color: $primary-color;
+    }
+    .Make-Appointment{
+        a{
+            color: $white-color;
+        }
+    }
+    button{
+        color: $primary-color;
+    }
+}
+// .appoipmentScroll{
+//     @include button($primary-color,$white-color);
+// }
+
+
+//!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media medium @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@media screen and (max-width:1024px){
+ nav{
+    
+     position: fixed;
+    button{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .close-menu-button{
+        display: none;
+        cursor: pointer;
+    }
+    ul{
+        // border: 2px solid red;
+        display: none;
+        flex-direction: column;
+        gap:0;
+        position: fixed;
+        right: 5%;
+        top: 8rem;
+        width: 32rem;
+       text-align: center;
+       perspective: 300px;
+        li{
+            // border: 1px solid red;
+            padding: 0;
+            width: 100%;
+            height: 6.4rem;
+            transform-origin: top ;
+            opacity: 0;
+            animation: openMyMenu 500ms ease;
+            animation-fill-mode: forwards;
+        
+            a{
+                 // margin: 1rem 0;
+                 // border: 2px solid green;
+                 background: linear-gradient(130deg,darken($primary-varient-color,12%),$primary-color);
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                place-items: center;
+                box-shadow: 0 16px 26px rgba($color: #000000, $alpha: 0.4);
+            }
+        } 
+        .Make-Appointment{
+            // border: 2px solid red;
+            width: 100%;
+            padding: 0;
+            height: 6.4rem;
+          
+        }
+        .Make-Appointment a{
+            background: $secondary-color;
+        }
+        li:nth-child(2){
+         animation-delay: 500ms;
+        }
+        li:nth-child(3){
+         animation-delay: 1000ms;
+        }
+        li:nth-child(4){
+         animation-delay: 1500ms;
+        }
+        li:nth-child(5){
+         animation-delay: 2000ms;
+        }
+    }
+ }
+
+ .navBarScroll{
+    a{
+        color: $white-color;
+    }
+    .Make-Appointment{
+        a{
+            color: $white-color;
+        }
+    }
+} 
+}
+
+//! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Animations @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@keyframes openMyMenu {
+    0%{
+transform: rotateX(-90deg);
+opacity: 0;
+    }
+    100%{
+transform: rotateX(0deg);
+opacity: 1;
+    }
+}
+//! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width:600px){
+
+nav{
+    ul{
+        right: 2.5%;
+    }
+}
+
+}

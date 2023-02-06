@@ -1,0 +1,99 @@
+#footer{
+    margin-top: 6rem;
+    background: $black-color;
+    color: $light-color;
+    padding-top: 4rem ;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+       justify-items: center;
+       margin-bottom: 4rem;
+       p{
+           margin: 0;
+       }
+        article{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+            h3{
+                color: $white-color;
+            }
+            a{
+                color: $light-color;
+                transition: all 400ms ease;
+                &:hover{
+                color: $white-color;
+                }
+            }
+            i{
+                font-size: 2rem;
+            }
+
+        }
+        // article ens here
+        .footer__1{
+            div{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+        // footer--1 ends here
+        .footer__4{
+            .contact__icons{
+                display: flex;
+                gap: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+        // footer--4 ends here
+    }
+    // container ends here
+    .footer__copyright{
+        border-top: 1px solid rgba($white-color,0.2);
+        text-align: center;
+       padding: 1rem 0;
+    }
+}
+
+
+
+
+//!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media medium @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@media screen and (max-width:1024px){
+
+#footer{
+    .container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-items: flex-start;
+    }
+}
+}
+//!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media small @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@media screen and (max-width:600px){
+
+#footer{
+    .container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+       article{
+           text-align: center;
+       }
+       .footer__1{
+          &>div{
+              justify-content: center;
+          }
+       }
+    }
+}
+}

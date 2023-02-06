@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@400;500;600&display=swap');
+
+//!important css variables
+$primary-color:#480ca8;
+$primary-varient-color:#4cc9f0;
+$secondary-color:#f72585;
+$white-color:#fff;
+$light-color:rgba($white-color,0.7);
+$black-color:#0c031b;
+$dark-color:rgba($black-color,0.7);
+$success-color:#54eb72;
+$container-md: 90%;
+$container-lg:90%;
+
+//!@@@@@@@@@@@@@@@@@@@@@@@@@@@@ basic css reset @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 ;
+    border: 0;
+    outline: 0; 
+    text-decoration: none;
+    list-style-type: none;
+}
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 ;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:rgba( $primary-varient-color, 0.1);
+    color: $dark-color;
+    user-select: none;
+    line-height: 1.6;
+}
+
+
+ul li,a,p,span{
+    font-size: 1.6rem;  
+}
+small{
+    font-size: 1.3rem;
+}
+h1{
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+h3{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+h4{
+    font-size: 2rem;
+    margin: 1rem 0;
+    line-height: 1.3;
+    
+}
+h5{
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    line-height: 1.3;
+}
+h6{
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    line-height: 1.3;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-transform: capitalize;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+button{
+    display: inline-block;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+p{
+    margin: 1rem 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+section{
+    margin-top: 8rem;
+    &>h2{
+        text-align: center;
+    };
+    &>p{
+   width: 42%;
+   text-align: center;
+   margin: 1rem auto 4rem;
+    };
+}
+
+label{
+    font-size: 1.6rem;
+}

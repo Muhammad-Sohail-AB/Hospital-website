@@ -1,0 +1,46 @@
+.swiper{
+    // border: 2px solid red;
+    width:90%;
+    .swiper-wrapper{
+    //    border: 1px solid green;
+       height: fit-content;
+        .swiper-slide{
+            @include backgroundgradient;
+            // border: 2px solid black;
+            border-radius: 1.6rem;
+            padding: 1rem 2rem;
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+            height: fit-content;
+            // this margin we icluded to push the pagination down
+            margin-bottom: 4rem;
+            .testimonial__info{
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+             
+                .testimonial__image{
+                    height: 60px;
+                    width: 60px;
+                    img{
+                        border-radius: 50%;
+                        // aspect-ratio: 1/1; 
+                    }
+                }
+                .testimonail__content{
+                    margin-top: 1.3rem;
+                 h6{
+                     margin: 0;
+                 }
+                 p{
+                     margin-top: 0;
+                     text-transform: capitalize;
+                 }
+                }
+            }
+        }
+    }
+    .swiper-pagination-bullet{
+        background: $primary-color;
+    }
+}
